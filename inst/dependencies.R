@@ -1,6 +1,6 @@
 # No Remotes ----
 # Attachments ----
-to_install <- c("mvtnorm", "truncdist", "nleqslv", "ggplot2", "compiler", "scales", "ggthemes", "svMisc")
+to_install <- c("MASS")
 for (i in to_install) {
     message(paste("looking for ", i))
     if (!requireNamespace(i)) {
