@@ -1,4 +1,4 @@
-Bayes_est_LogN_prior = function(y, ini.nu = 1 , S = 1000, mu = 0, sigma.sq = 1){
+BayesLNP = function(y, ini.nu = 1 , S = 1000, mu = 0, sigma.sq = 1){
   # y : samples
   # ini.nu : initial value of MCMC chain
   # S : Number of MCMC sample
