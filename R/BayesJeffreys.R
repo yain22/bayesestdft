@@ -1,12 +1,6 @@
 library(numDeriv)
 
 BayesJeffreys = function(y, ini.nu = 1 , S = 1000, delta = 0.001, sampling.alg = c("MH","MALA")){
-  # y : Number of samples
-  # ini.nu : initial value of MCMC chain
-  # S : Number of MCMC sample
-  # delta : Step of proposal
-  # sampling.alg : Sampling algorithm Metropolis-Hastings Langevin Algorithm or Metropolis-Hastings Algorithm
-
   # MCMC sampler
   if(sampling.alg == "MH"){
     # Sample size

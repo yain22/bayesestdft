@@ -1,9 +1,4 @@
 BayesLNP = function(y, ini.nu = 1 , S = 1000, mu = 1, sigma.sq = 1){
-  # y : samples
-  # ini.nu : initial value of MCMC chain
-  # S : Number of MCMC sample
-  # (mu, sigma.sq) : parameters of log-normal prior
-
   # Number of sample size
   N = length(y)
 
