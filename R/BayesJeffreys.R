@@ -1,8 +1,9 @@
 library(numDeriv)
 
 BayesJeffreys = function(y, ini.nu = 1 , S = 1000, delta = 0.001, sampling.alg = c("MH","MALA")){
-  # MCMC sampler
+
   if(sampling.alg == "MH"){
+
     # Sample size
     N = length(y)
 
@@ -54,7 +55,7 @@ BayesJeffreys = function(y, ini.nu = 1 , S = 1000, delta = 0.001, sampling.alg =
         # c. Draw an initial proposal :
         eta.star = rnorm(n = 1, mean = eta[s], sd = sqrt(2*delta))
 
-        # d. ESS core step
+        # d. MH correction step
         if (u < alpha(eta.new = eta.star, eta.old = eta[s])){
           eta[s+1] = eta.star
         } else {
@@ -140,7 +141,7 @@ BayesJeffreys = function(y, ini.nu = 1 , S = 1000, delta = 0.001, sampling.alg =
         # c. Draw an initial proposal :
         eta.star = rnorm(n = 1, mean = eta[s] - delta*grad_gamma_target(eta[s]), sd = sqrt(2*delta))
 
-        # d. ESS core step
+        # d. MH correction step
         if (u < alpha(eta.new = eta.star, eta.old = eta[s])){
           eta[s+1] = eta.star
         } else {
