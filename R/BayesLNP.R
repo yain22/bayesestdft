@@ -71,7 +71,7 @@ BayesLNP = function(y, ini.nu = 1 , S = 1000, mu = 1, sigma.sq = 1){
 
   }
 
-  res = list(nu = nu)
+  res = nu
 
   return(res)
 
