@@ -2,5 +2,6 @@
 
 export(BayesLNP)
 export(BayesJeffreys)
+export(index)
 import(MASS)
 import(numDeriv)
