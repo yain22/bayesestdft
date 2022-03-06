@@ -28,7 +28,20 @@ BayesJeffreys(
 Random walk Metropolis algorithm and Metropolis-adjusted Langevin algorithm to draw posterior samples from the posterior distribution of the degrees of freedom based on the Jeffreys prior.
 }
 \examples{
+# Example 1 (Simulation study):
+
 x = rt(n = 100, df = 0.1)
+nu1 = BayesJeffreys(x, sampling.alg = "MH")
+nu2 = BayesJeffreys(x, sampling.alg = "MALA")
+mean(nu1)
+mean(nu2)
+
+# Example 2 (Log-return data):
+
+library(dplyr)
+data(index_return)
+index_return_US <- index_return %>% filter(Country == "United States")
+x = index_return_US$log_return_rate
 nu1 = BayesJeffreys(x, sampling.alg = "MH")
 nu2 = BayesJeffreys(x, sampling.alg = "MALA")
 mean(nu1)

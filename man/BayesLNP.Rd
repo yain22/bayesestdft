@@ -28,7 +28,16 @@ BayesLNP(
 Elliptical slice sampler to draw posterior samples from the posterior distribution of the degrees of freedom provided a log-normal prior.
 }
 \examples{
+# Example 1:
 x = rt(n = 100, df = 0.1)
 nu = BayesLNP(x)
 mean(nu)
+
+# Example 2:
+library(dplyr)
+data(index_return)
+index_return_US <- index_return %>% filter(Country == "United States")
+x = index_return_US$log_return_rate
+nu.LNP.ESS = BayesLNP(x)
+mean(nu.LNP.ESS)
 }
