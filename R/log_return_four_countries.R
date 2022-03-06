@@ -5,4 +5,4 @@
 #' @format A data frame with 30 rows and 116 variables:
 #'
 #' @source \url{https://github.com/CSSEGISandData/COVID-19}
-"time_series_data"
+"log_return_four_countries"
