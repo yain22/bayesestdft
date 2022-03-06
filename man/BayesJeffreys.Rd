@@ -40,7 +40,7 @@ mean(nu2)
 
 library(dplyr)
 data(index_return)
-index_return_US <- index_return %>% filter(Country == "United States")
+index_return_US <- filter(index_return, Country == "United States")
 x = index_return_US$log_return_rate
 nu1 = BayesJeffreys(x, sampling.alg = "MH")
 nu2 = BayesJeffreys(x, sampling.alg = "MALA")
