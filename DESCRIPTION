@@ -1,11 +1,10 @@
 Package: bayesestdft
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: R package to implement sampling algorithm to estimate the degrees of freedom of the Student-t distribution
+Version: 1.0.0
+Author: c(person("Se Yoon","Lee", email = "seyoonlee.stat.math@gmail.com", role = c("aut", "cre"))
+Maintainer: Se Yoon Lee <seyoonlee.stat.math@gmail.com>
+Description: bayesestdft is an R package to implement sampling algorithm to estimate the degrees of freedom of the Student-t distribution. 
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
