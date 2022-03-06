@@ -22,7 +22,7 @@ BayesLNP(
 \item{sigma.sq}{- Variance of the log-normal prior density (Default = 1)}
 }
 \value{
-\item{Output}{- S number of posterior samples}
+\item{Output}{- S-dimensional vector of posterior samples}
 }
 \description{
 Elliptical slice sampler to draw posterior samples from the posterior distribution of the degrees of freedom provided a log-normal prior.

@@ -22,7 +22,7 @@ BayesJeffreys(
 \item{sampling.alg}{- Option of algorithm specifying Random walk Metropolis algorithm (sampling.alg = "MH") and Metropolis-adjusted Langevin algorithm (sampling.alg = "MALA")}
 }
 \value{
-\item{Output}{- S number of posterior samples}
+\item{Output}{- S-dimensional vector of posterior samples}
 }
 \description{
 Random walk Metropolis algorithm and Metropolis-adjusted Langevin algorithm to draw posterior samples from the posterior distribution of the degrees of freedom based on the Jeffreys prior.
