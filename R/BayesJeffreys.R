@@ -72,6 +72,13 @@ BayesJeffreys = function(y, ini.nu = 1 , S = 1000, delta = 0.001, sampling.alg =
   }
 
   if(sampling.alg == "MALA"){
+
+    # Install library(numDeriv) if missing
+    list.of.packages <- c("numDeriv")
+    new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+    if(length(new.packages)) install.packages(new.packages)
+    library("numDeriv")
+
     # Sample size
     N = length(y)
 
