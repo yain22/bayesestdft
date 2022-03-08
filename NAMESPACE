@@ -3,4 +3,3 @@
 export(BayesLNP)
 export(BayesJeffreys)
 import(MASS)
-import(numDeriv)
