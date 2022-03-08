@@ -1,5 +1,3 @@
-library(numDeriv)
-
 BayesJeffreys = function(y, ini.nu = 1 , S = 1000, delta = 0.001, sampling.alg = c("MH","MALA")){
 
   if(sampling.alg == "MH"){
