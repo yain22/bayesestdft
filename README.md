@@ -24,7 +24,6 @@ library(bayesestdft)
 ## Example 1
 
 ```r
-# Example 1 (Simulation study):
 x = rt(n = 100, df = 0.1)
 nu = BayesLNP(x)
 mean(nu)
