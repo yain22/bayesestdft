@@ -21,7 +21,7 @@ devtools::install_github("yain22/bayesestdft")
 library(bayesestdft)
 ```
 
-## Example 1
+### Example 1
 
 ```r
 x = rt(n = 100, df = 0.1)
@@ -29,7 +29,7 @@ nu = BayesLNP(x)
 mean(nu)
 ```
 
-## Example 2
+### Example 2
 
 ```r
 library(dplyr)
@@ -40,7 +40,7 @@ nu = BayesLNP(x)
 mean(nu)
 ```
 
-## Example 3
+### Example 3
 
 ```r
 x = rt(n = 100, df = 0.1)
@@ -50,7 +50,7 @@ mean(nu1)
 mean(nu2)
 ```
 
-## Example 4
+### Example 4
 
 ```r
 library(dplyr)
