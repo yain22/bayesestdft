@@ -4,6 +4,10 @@
 * [Overview](#overview)
 * [Installation](#installation)
 * [Example 1](#example-1)
+* [Example 2](#example-2)
+* [Example 3](#example-3)
+* [Example 4](#example-4)
+
 
 ## Overview
 An R package `bayesestdft` includes tools to implement Bayesian estimation of the number of degrees of the freedom of the Student's t-distribution, developed by [Dr. Se Yoon Lee](https://sites.google.com/view/seyoonlee) (seyoonlee.stat.math@gmail.com). At current version, the main functions are `BayesLNP` and `BayesJeffreys` that implement Markov Chain Monte Carlo algorithms to sample from the number of degrees of the freedom of the Student's t-distribution. To operatre the function `BayesJeffreys`, user needs to install `R library(numDeriv)`.
