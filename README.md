@@ -18,7 +18,7 @@ R version 4.0.4 (or higher)
 ```r
 library(devtools)
 devtools::install_github("yain22/bayesestdft")
-ibrary(bayesestdft)
+library(bayesestdft)
 ```
 
 ## Example 1
