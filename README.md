@@ -3,10 +3,10 @@
 ## Contents
 * [Overview](#overview)
 * [Installation](#installation)
-* [Jeffreys prior: eg 1](#example-1)
-* [Gamma prior : eg 3](#example-3)
-* [Exponential prior : eg 5](#example-5)
-* [Log-normal prior: eg 7](#example-7)
+* [Jeffreys prior](#example-1)
+* [Exponential prior](#example-5)
+* [Gamma prior](#example-3)
+* [Log-normal prior](#example-7)
 
 
 ## Overview
@@ -50,34 +50,57 @@ mean(nu1)
 mean(nu2)
 ```
 
-### Example 3
+## Exponential prior
+
+### Estimation of the degrees of freedom from simulated data
 
 ```r
 x = rt(n = 100, df = 0.1)
-nu = BayesGA(x)
+nu = BayesGA(x, a = 1, b = 0.1)
 mean(nu)
 ```
-
-### Example 4
+### Estimation of the degrees of freedom of daily log-return rate of S&P500 index time series data 
 
 ```r
 library(dplyr)
 data(index_return)
 index_return_US <- filter(index_return, Country == "United States")
 x = index_return_US$log_return_rate
-nu = BayesGA(x)
+nu = BayesGA(x, a = 1, b = 0.1)
+mean(nu)
+```
+
+## Gamma prior
+
+### Estimation of the degrees of freedom from simulated data
+
+```r
+x = rt(n = 100, df = 0.1)
+nu = BayesGA(x, a = 2, b = 0.1)
+mean(nu)
+```
+### Estimation of the degrees of freedom of daily log-return rate of S&P500 index time series data 
+
+```r
+library(dplyr)
+data(index_return)
+index_return_US <- filter(index_return, Country == "United States")
+x = index_return_US$log_return_rate
+nu = BayesGA(x, a = 2, b = 0.1)
 mean(nu)
 ```
 
 
-### Example 1
+## Log-normal prior
+
+### Estimation of the degrees of freedom from simulated data
 
 ```r
 x = rt(n = 100, df = 0.1)
 nu = BayesLNP(x)
 mean(nu)
 ```
-### Example 2
+### Estimation of the degrees of freedom of daily log-return rate of S&P500 index time series data 
 
 ```r
 library(dplyr)
