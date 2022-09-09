@@ -28,9 +28,11 @@ library(bayesestdft)
 
 ## Goal
 The goal of R Package `bayesestdft` is the fully Bayesian estimation of the number of degrees of the freedom of the Student's t-distribution. More precisely, provided the $N$ number of independently and identically distributed samples $x = (x_1,\cdots,x_N)$ drawn from the Student t-distribution
+
 $$ 
-t_{\nu}(x) = \frac{\Gamma\left( \frac{\nu+1}{2} \right)}{\sqrt{\nu \pi} \Gamma\left( \frac{\nu}{2} \right)} \left(1 + \frac{x^2}{\nu} \right)^{-\frac{\nu +1}{2}}, \quad x\in \mathbb{R},
+t_{\nu}(x) = \frac{\Gamma\left( \frac{\nu+1}{2} \right)}{\sqrt{\nu \pi} \Gamma\left( \frac{\nu}{2} \right)} \left(1 + \frac{x^2}{\nu} \right)^{-\frac{\nu +1}{2}}, \quad x \in \mathbb{R},
 $$
+
 and a prior distribution $\pi(\nu)$, the aim is to draw posterior samples from the posterior distribution
 
 $$
