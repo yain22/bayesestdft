@@ -42,7 +42,7 @@ The current version of the package provides four options of the priors $\pi(\nu)
 
 ## Jeffreys prior
 
-$$ \pi_{J}(\nu) \propto \left(\frac{\nu}{\nu+3} \right)^{1/2} \left\{ \psi'\left(\frac{\nu}{2}\right) -\psi'\left(\frac{\nu+1}{2}\right) -\frac{2(\nu + 3)}{\nu(\nu+1)^2}\right\},\quad \nu \in \mathbb{R}^+$$
+$$ \pi_{J}(\nu) \propto \left(\frac{\nu}{\nu+3} \right)^{1/2} \left( \psi'\left(\frac{\nu}{2}\right) -\psi'\left(\frac{\nu+1}{2}\right) -\frac{2(\nu + 3)}{\nu(\nu+1)^2}\right),\quad \nu \in \mathbb{R}^+$$
 
 #### Estimation of the degrees of freedom from simulated data
 
