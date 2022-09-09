@@ -110,3 +110,7 @@ x = index_return_US$log_return_rate
 nu = BayesLNP(x)
 mean(nu)
 ```
+
+## References
+
+[1] [Se Yoon Lee. (2022) “The Use of a Log-Normal Prior for the Student t-Distribution,” Axioms](https://www.mdpi.com/2075-1680/11/9/462)
