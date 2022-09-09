@@ -3,10 +3,14 @@
 ## Contents
 * [Overview](#overview)
 * [Installation](#installation)
-* [Example 1](#example-1)
-* [Example 2](#example-2)
-* [Example 3](#example-3)
-* [Example 4](#example-4)
+* [Jeffreys prior: eg 1](#example-1)
+* [Jeffreys prior: eg 2](#example-2)
+* [Gamma prior : eg 3](#example-3)
+* [Gamma prior : eg 4](#example-4)
+* [Exponential prior : eg 5](#example-5)
+* [Exponential prior : eg 6](#example-6)
+* [Log-normal prior: eg 7](#example-7)
+* [Log-normal prior eg 8](#example-8)
 
 
 ## Overview
@@ -25,6 +29,7 @@ devtools::install_github("yain22/bayesestdft")
 library(bayesestdft)
 ```
 
+## Jeffreys prior
 ### Example 1
 
 ```r
@@ -48,13 +53,32 @@ mean(nu)
 
 ```r
 x = rt(n = 100, df = 0.1)
+nu = BayesGA(x)
+mean(nu)
+```
+
+### Example 4
+
+```r
+library(dplyr)
+data(index_return)
+index_return_US <- filter(index_return, Country == "United States")
+x = index_return_US$log_return_rate
+nu = BayesGA(x)
+mean(nu)
+```
+
+### Example 5
+
+```r
+x = rt(n = 100, df = 0.1)
 nu1 = BayesJeffreys(x, sampling.alg = "MH")
 nu2 = BayesJeffreys(x, sampling.alg = "MALA")
 mean(nu1)
 mean(nu2)
 ```
 
-### Example 4
+### Example 6
 
 ```r
 library(dplyr)
