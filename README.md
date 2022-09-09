@@ -27,7 +27,7 @@ library(bayesestdft)
 
 ## Jeffreys prior
 
-### Estimation of the degrees of freedom from simulated data
+#### Estimation of the degrees of freedom from simulated data
 
 ```r
 x = rt(n = 100, df = 0.1)
