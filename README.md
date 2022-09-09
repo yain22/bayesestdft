@@ -37,7 +37,7 @@ mean(nu1)
 mean(nu2)
 ```
 
-### Estimation of the degrees of freedom of daily log-return rate of S&P500 index time series data 
+#### Estimation of the degrees of freedom of daily log-return rate of S&P500 index time series data 
 
 ```r
 library(dplyr)
@@ -52,14 +52,14 @@ mean(nu2)
 
 ## Exponential prior
 
-### Estimation of the degrees of freedom from simulated data
+#### Estimation of the degrees of freedom from simulated data
 
 ```r
 x = rt(n = 100, df = 0.1)
 nu = BayesGA(x, a = 1, b = 0.1)
 mean(nu)
 ```
-### Estimation of the degrees of freedom of daily log-return rate of S&P500 index time series data 
+#### Estimation of the degrees of freedom of daily log-return rate of S&P500 index time series data 
 
 ```r
 library(dplyr)
@@ -72,14 +72,14 @@ mean(nu)
 
 ## Gamma prior
 
-### Estimation of the degrees of freedom from simulated data
+#### Estimation of the degrees of freedom from simulated data
 
 ```r
 x = rt(n = 100, df = 0.1)
 nu = BayesGA(x, a = 2, b = 0.1)
 mean(nu)
 ```
-### Estimation of the degrees of freedom of daily log-return rate of S&P500 index time series data 
+#### Estimation of the degrees of freedom of daily log-return rate of S&P500 index time series data 
 
 ```r
 library(dplyr)
@@ -93,14 +93,14 @@ mean(nu)
 
 ## Log-normal prior
 
-### Estimation of the degrees of freedom from simulated data
+#### Estimation of the degrees of freedom from simulated data
 
 ```r
 x = rt(n = 100, df = 0.1)
 nu = BayesLNP(x)
 mean(nu)
 ```
-### Estimation of the degrees of freedom of daily log-return rate of S&P500 index time series data 
+#### Estimation of the degrees of freedom of daily log-return rate of S&P500 index time series data 
 
 ```r
 library(dplyr)
