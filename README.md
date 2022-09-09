@@ -25,7 +25,8 @@ devtools::install_github("yain22/bayesestdft")
 library(bayesestdft)
 ```
 
-## Jeffreys prior $ pi(x) $
+## Jeffreys prior
+$$ pi(x) $$
 
 #### Estimation of the degrees of freedom from simulated data
 
