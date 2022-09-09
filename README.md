@@ -3,7 +3,7 @@
 ## Contents
 * [Overview](#overview)
 * [Installation](#installation)
-* [Jeffreys prior](#example-1)
+* [Jeffreys prior](#jeffreys-prior)
 * [Exponential prior](#example-5)
 * [Gamma prior](#example-3)
 * [Log-normal prior](#example-7)
