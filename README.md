@@ -3,6 +3,7 @@
 ## Contents
 * [Overview](#overview)
 * [Installation](#installation)
+* [Goal](#goal)
 * [Jeffreys prior](#jeffreys-prior)
 * [Exponential prior](#exponential-prior)
 * [Gamma prior](#gamma-prior)
@@ -10,7 +11,7 @@
 
 
 ## Overview
-An R package `bayesestdft` includes tools to implement Bayesian estimation of the number of degrees of the freedom of the Student's t-distribution, developed by [Dr. Se Yoon Lee](https://sites.google.com/view/seyoonlee) (seyoonlee.stat.math@gmail.com). The package was developed to analyze simulated and real data from the published article ["The Use of a Log-Normal Prior for the Student t-Distribution" Axioms 2022, 11, 462"](https://www.mdpi.com/2075-1680/11/9/462). Readers can see the paper for technical details about the package. At current version, the main functions are `BayesLNP` and `BayesJeffreys` that implement Markov Chain Monte Carlo algorithms to sample from the number of degrees of the freedom of the Student's t-distribution. To operatre the function `BayesJeffreys`, user needs to install `R library(numDeriv)`. See the [Slides](https://github.com/yain22/bayesestdft/blob/master/doc/Explaining%20R%20Package%20bayesestdft.pdf) that summarized the technical parts of the R package.
+An R package `bayesestdft` includes tools to implement Bayesian estimation of the number of degrees of the freedom of the Student's t-distribution, developed by [Dr. Se Yoon Lee](https://sites.google.com/view/seyoonlee) (seyoonlee.stat.math@gmail.com). The package was developed to analyze simulated and real data from the published article ["The Use of a Log-Normal Prior for the Student t-Distribution" Axioms 2022, 11, 462"](https://www.mdpi.com/2075-1680/11/9/462). Readers can see the paper for technical details about the package. At current version, the main functions are `BayesLNP`, `BayesJeffreys`, and `BayesGA` that implement Markov Chain Monte Carlo algorithms to sample from the posterior distribution of the degrees of freedom. To operatre the function `BayesJeffreys`, user needs to install `R library(numDeriv)`. See the [Slides](https://github.com/yain22/bayesestdft/blob/master/doc/Explaining%20R%20Package%20bayesestdft.pdf) that summarized the technical parts of the R package.
 
 ## Required R version
 ```r
@@ -25,7 +26,23 @@ devtools::install_github("yain22/bayesestdft")
 library(bayesestdft)
 ```
 
+## Goal
+The goal of R Package `bayesestdft` is the fully Bayesian estimation of the number of degrees of the freedom of the Student's t-distribution. More precisely, provided the $N$ number of independently and identically distributed samples $\textbf{x} = (x_1,\cdots,x_N)$ drawn from the Student t-distribution
+$$ 
+t_{\nu}(x) = \frac{\Gamma\left( \frac{\nu+1}{2} \right)}{\sqrt{\nu \pi} \Gamma\left( \frac{\nu}{2} \right)} \left(1 + \frac{x^2}{\nu} \right)^{-\frac{\nu +1}{2}}, \quad x\in \mathbb{R},
+$$
+and a prior distribution $\pi(\nu)$, the aim is to draw posterior samples from the posterior distribution
+
+$$
+\pi(\nu|\textbf{x}) = \frac{\prod_{i=1}^N t_{\nu}(x_i) \cdot \pi(\nu)}{\int \prod_{i=1}^N t_{\nu}(x_i) \cdot \pi(\nu) d\nu}, \quad \nu \in \mathbb{R}^+.
+$$
+
+The current version of the package provides four options of the priors $\pi(\nu)$. They are the Jeffreys prior $\pi_J(\nu)$, an exponential prior $\pi_E(\nu)$, a gamma prior $\pi_G(\nu)$, and a log-normal prior $\pi_L(\nu)$.
+
+
 ## Jeffreys prior
+
+$$ \pi_{J}(\nu) \propto \left(\frac{\nu}{\nu+3} \right)^{1/2} \left\{ \psi'\left(\frac{\nu}{2}\right) -\psi'\left(\frac{\nu+1}{2}\right) -\frac{2(\nu + 3)}{\nu(\nu+1)^2}\right\},\quad \nu \in \mathbb{R}^+$$
 
 #### Estimation of the degrees of freedom from simulated data
 
@@ -52,6 +69,8 @@ mean(nu2)
 
 ## Exponential prior
 
+$$ \pi_{E}(\nu) =Ga(\nu|1,0.1) = Exp(\nu|0.1) = \frac{1}{10} e^{-\nu/10},\quad \nu \in \mathbb{R}^+$$
+
 #### Estimation of the degrees of freedom from simulated data
 
 ```r
@@ -71,6 +90,8 @@ mean(nu)
 ```
 
 ## Gamma prior
+
+$$ \pi_{G}(\nu) =Ga(\nu|2,0.1) =\frac{\nu}{100} e^{-\nu/10},\quad \nu \in \mathbb{R}^+$$
 
 #### Estimation of the degrees of freedom from simulated data
 
@@ -92,6 +113,8 @@ mean(nu)
 
 
 ## Log-normal prior
+
+$$ \pi_{L}(\nu) =logN(\nu|1,1) =\frac{1}{\nu \sqrt{2\pi}} \exp\left[- \frac{(\log \nu - 1)^2}{2} \right],\quad \nu \in \mathbb{R}^+$$
 
 #### Estimation of the degrees of freedom from simulated data
 
