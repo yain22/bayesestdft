@@ -36,7 +36,7 @@ $$
 and a prior distribution $\pi(\nu)$, the aim is to draw posterior samples from the posterior distribution
 
 $$
-\pi(\nu|\textbf{x}) = \frac{\prod_{i=1}^N t_{\nu}(x_i) \cdot \pi(\nu)}{\int \prod_{i=1}^N t_{\nu}(x_i) \cdot \pi(\nu) d\nu}, \quad \nu \in \mathbb{R}^+.
+\pi(\nu|\textbf{x}) = \frac{\prod t_{\nu}(x_i) \cdot \pi(\nu)}{\int \prod t_{\nu}(x_i) \cdot \pi(\nu) d\nu}, \quad \nu \in \mathbb{R}^+.
 $$
 
 The current version of the package provides four options of the priors $\pi(\nu)$. They are the Jeffreys prior $\pi_J(\nu)$, an exponential prior $\pi_E(\nu)$, a gamma prior $\pi_G(\nu)$, and a log-normal prior $\pi_L(\nu)$.
