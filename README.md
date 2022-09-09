@@ -27,7 +27,7 @@ library(bayesestdft)
 
 ## Jeffreys prior
 
-$$ \pi(x) $$
+$$ \pi(nu) $$
 
 
 #### Estimation of the degrees of freedom from simulated data
