@@ -64,7 +64,7 @@ BayesGA = function(y, ini.nu = 1 , S = 1000, delta = 0.001, a = 1, b = 0.1){
 
   }
 
-  res = list(nu = nu)
+  res = nu
 
   return(res)
 
