@@ -4,13 +4,9 @@
 * [Overview](#overview)
 * [Installation](#installation)
 * [Jeffreys prior: eg 1](#example-1)
-* [Jeffreys prior: eg 2](#example-2)
 * [Gamma prior : eg 3](#example-3)
-* [Gamma prior : eg 4](#example-4)
 * [Exponential prior : eg 5](#example-5)
-* [Exponential prior : eg 6](#example-6)
 * [Log-normal prior: eg 7](#example-7)
-* [Log-normal prior eg 8](#example-8)
 
 
 ## Overview
@@ -30,23 +26,28 @@ library(bayesestdft)
 ```
 
 ## Jeffreys prior
-### Example 1
+
+### Estimation of the degrees of freedom from simulated data
 
 ```r
 x = rt(n = 100, df = 0.1)
-nu = BayesLNP(x)
-mean(nu)
+nu1 = BayesJeffreys(x, sampling.alg = "MH")
+nu2 = BayesJeffreys(x, sampling.alg = "MALA")
+mean(nu1)
+mean(nu2)
 ```
 
-### Example 2
+### Estimation of the degrees of freedom of daily log-return rate of S&P500 index time series data 
 
 ```r
 library(dplyr)
 data(index_return)
 index_return_US <- filter(index_return, Country == "United States")
 x = index_return_US$log_return_rate
-nu = BayesLNP(x)
-mean(nu)
+nu1 = BayesJeffreys(x, sampling.alg = "MH")
+nu2 = BayesJeffreys(x, sampling.alg = "MALA")
+mean(nu1)
+mean(nu2)
 ```
 
 ### Example 3
@@ -68,25 +69,21 @@ nu = BayesGA(x)
 mean(nu)
 ```
 
-### Example 5
+
+### Example 1
 
 ```r
 x = rt(n = 100, df = 0.1)
-nu1 = BayesJeffreys(x, sampling.alg = "MH")
-nu2 = BayesJeffreys(x, sampling.alg = "MALA")
-mean(nu1)
-mean(nu2)
+nu = BayesLNP(x)
+mean(nu)
 ```
-
-### Example 6
+### Example 2
 
 ```r
 library(dplyr)
 data(index_return)
 index_return_US <- filter(index_return, Country == "United States")
 x = index_return_US$log_return_rate
-nu1 = BayesJeffreys(x, sampling.alg = "MH")
-nu2 = BayesJeffreys(x, sampling.alg = "MALA")
-mean(nu1)
-mean(nu2)
+nu = BayesLNP(x)
+mean(nu)
 ```
