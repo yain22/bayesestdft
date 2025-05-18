@@ -6,7 +6,6 @@ winratiosim <- function(nsim, N, Randomization.ratio, alpha.JFM, theta.JFM,
   
   # Replication function
   simulate_one_trial <- function(r) {
-    set.seed(r * 1234)
     
     allocation_ratio <- Randomization.ratio[1] / sum(Randomization.ratio)
     n_treatment <- rbinom(n = 1, size = N, prob = allocation_ratio)
