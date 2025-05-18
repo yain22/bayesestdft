@@ -159,3 +159,9 @@ kable(df.combined, caption = "Simulation Results")
 print(paste0("Median value of win ratio is ", round(median(power.sim_res$df_WR.analysis.summary$R_w), 3)))
 print(paste0("Median value of probability of tie is ", round(median(power.sim_res$df_Total_probability[, 2]), 3)))
 ```
+
+# Simulation Results
+```r
+# Note: Results may slightly differ from those in the paper due to random seed settings.
+```
+
