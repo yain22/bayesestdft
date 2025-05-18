@@ -21,6 +21,7 @@ library(foreach)
 library(doSNOW)
 
 # Simulaiton under power
+set.seed(20250518)
 power.design_parameters = list(
   nsim = 1000,
   N = 400, # 100, 200, 300, 400, 500
