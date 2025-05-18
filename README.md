@@ -131,7 +131,7 @@ df.variance <- data.frame(
 ## Round and combine everything
 df.combined <- cbind(df.power.type1, round(df.variance, 4))
 
-## Generate the summary string from df.kable (already created)
+## Generate the summary df.kable
 df_kable_summary <- paste0(
   "Simulation assumptions:\n",
   "  Treatment Arm — Mortality = ", power.design_parameters$lambda_trt,
