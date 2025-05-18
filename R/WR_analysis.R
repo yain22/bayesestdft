@@ -31,7 +31,7 @@ WR_analysis = function(dataset1,dataset2,dataset3){
   # FS test statistics [Finkelstein, D. M., & Schoenfeld, D. A. (1999). Combining mortality and longitudinal measures in clinical trials. Statistics in medicine, 18(11), 1341-1354.]
   {
     T.stat = W_T - W_C
-    temp.Ui = dataset3 %>% dplyr::group_by(usubjid1) %>% dplyr::summarise(Ui = sum(score, na.rm = T))
+    temp.Ui = dataset3 %>% group_by(usubjid1) %>% summarise(Ui = sum(score, na.rm = T))
     V = ((N_trt*N_ctl)/((N_trt + N_ctl)*(N_trt + N_ctl - 1)))*sum((temp.Ui$Ui)^2, na.rm = T) # Permutation Variance
     z = T.stat/sqrt(V)  
     p_value_FS = pnorm(z, lower.tail = F)
