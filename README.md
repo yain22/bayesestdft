@@ -9,7 +9,7 @@ library(winratiosim)
 ```
 
 # Implement the power analysis simulation 
-# Note: This simulation is optimized for Windows due to the parallel computing setup.
+## Note: This simulation is optimized for Windows due to the parallel computing setup.
 ```r
 # Install Library
 library(plyr)
