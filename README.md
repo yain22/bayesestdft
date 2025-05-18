@@ -1,6 +1,6 @@
 # Goal
 
-This R package implements the power analysis simulation described in the paper: Lee, S.Y. \emph{A note on the sample size formula for a win ratio endpoint}. \textit{Statistics in Medicine} (provisionally accepted).
+This R package implements the power analysis simulation described in the paper: Lee, S.Y. A note on the sample size formula for a win ratio endpoint. Statistics in Medicine (provisionally accepted) 2025:00(00):0-00.
 
 # Install R package
 ```r
