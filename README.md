@@ -163,5 +163,20 @@ print(paste0("Median value of probability of tie is ", round(median(power.sim_re
 # Simulation Results
 ```r
 # Note: Results may slightly differ from those in the paper due to random seed settings.
+> df_kable_summary
+[1] "Simulation assumptions:\n  Treatment Arm — Mortality = 0.13, Annualized HFH = 0.32, ΔKCCQ = 7.5, SD(ΔKCCQ) = 20, Attrition = 0.2\n  Control Arm — Mortality = 0.15, Annualized HFH Rate = 0.55, ΔKCCQ = 0, SD(ΔKCCQ) = 20, Attrition = 0.2\nRandomization Ratio (T:C) = 1:1\nSample Size (N) = 400, Number of simulations = 10000\nJoint Frailty Model Parameters: alpha = 0, theta = 1"
+> kable(df.combined, caption = "Simulation Results")
+
+
+Table: Simulation Results
+
+|Method  |Power               |Type_I_Error        | Median.Variance.under.Power| Median.Variance.under.Type.I.Error|
+|:-------|:-------------------|:-------------------|---------------------------:|----------------------------------:|
+|FS test |0.861(0.854, 0.868) |0.025(0.022, 0.028) |                      0.0168|                             0.0161|
+|YG test |0.82(0.812, 0.828)  |0.016(0.013, 0.018) |                      0.0197|                             0.0188|
+> print(paste0("Median value of win ratio is ", round(median(power.sim_res$df_WR.analysis.summary$R_w), 3)))
+[1] "Median value of win ratio is 1.486"
+> print(paste0("Median value of probability of tie is ", round(median(power.sim_res$df_Total_probability[, 2]), 3)))
+[1] "Median value of probability of tie is 0.191"
 ```
 
