@@ -78,8 +78,9 @@ library(foreach)
 library(doSNOW)
 
 # Simulaiton under power
+set.seed(20250518)
 power.design_parameters = list(
-      nsim = 1000,
+      nsim = 10000,
       N = 400, # 100, 200, 300, 400, 500
       Randomization.ratio = c(1, 1),
       alpha.JFM = 0, theta.JFM = 1,
