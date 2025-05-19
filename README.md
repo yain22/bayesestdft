@@ -3,7 +3,7 @@
 This R package implements the power analysis simulation described in the paper: Lee, S.Y. A note on the sample size formula for a win ratio endpoint. Statistics in Medicine (provisionally accepted) 2025:00(00):0-00.
 
 # Install R libaries to install winratiosim
-### The user needs to install several R libraries in order to set up winratiosim. Ensure that the following libraries are installed.
+### Note: The user needs to install several R libraries in order to set up winratiosim. Ensure that the following libraries are installed.
 ```{r}
 library(plyr)
 library(dplyr)
@@ -12,20 +12,28 @@ library(kableExtra)
 library(pbmcapply)
 library(foreach)
 library(doSNOW)
+library(devtools)
 ```
 
 # Install R package
+### Note: If there is any error in the installation of winratiosim, it is mainly because the user skipped installing the R libraries listed above or other necessary R libraries.
 ```r
 devtools::install_github("yain22/winratiosim")
 ```
-
 # Load R package
 ```r
 library(winratiosim)
 ```
 
+# Main R function for the sample size calculation
+```r
+# Check
+winratiosim
+?winratiosim::winratiosim
+```
+
 # Implement the power analysis simulation 
-## Note: This simulation is optimized for Windows due to the parallel computing setup.
+### Note: This simulation is optimized for Windows due to the parallel computing setup.
 ```r
 # Install Library
 library(plyr)
