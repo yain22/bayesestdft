@@ -26,6 +26,7 @@ library(winratiosim)
 ```
 
 # Main R function for the sample size calculation
+### Note: Once the R package winratiosim has been installed, the user can verify if the main R function can be loaded by checking the following.
 ```r
 # Check
 winratiosim
