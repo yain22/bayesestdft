@@ -14,15 +14,4 @@ Description: Provides simulation-based tools for power and sample size calculati
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-Suggests:
-    plyr,
-    dplyr,
-    foreach,
-    doSNOW,
-    pbmcapply,
-    kableExtra
-Imports:
-    stats,
-    utils,
-    parallel
 RoxygenNote: 7.3.2
