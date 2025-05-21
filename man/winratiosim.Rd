@@ -77,8 +77,9 @@ library(pbmcapply)
 library(foreach)
 library(doSNOW)
 
-# Simulaiton under power
+# Simulation under power scenario
 set.seed(20250518)
+## Set the data generating parameters
 power.design_parameters = list(
       nsim = 10000,
       N = 400, # 100, 200, 300, 400, 500
@@ -111,7 +112,8 @@ Power_binom_CI_one_sided_FS_Permutation = binom.conf.exact(x=sum(power.sim_res$d
 Power_one_sided_superiority_WR_Ron_Yu = mean(power.sim_res$df_WR.analysis.summary$LB_R_w > 1, na.rm = T)
 Power_binom_CI_one_sided_WR_Ron_Yu = binom.conf.exact(x=sum(power.sim_res$df_WR.analysis.summary$LB_R_w > 1, na.rm = T), n=nrow(power.sim_res$df_WR.analysis.summary) - sum(is.na(power.sim_res$df_WR.analysis.summary$LB_R_w)))
 
-# Simulaiton under Type I Error scenario
+# Simulation under Type I Error scenario
+## Set the data generating parameters
 t1e.design_parameters = list(
       nsim = power.design_parameters$nsim,
       N = power.design_parameters$N,
