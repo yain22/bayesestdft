@@ -1,6 +1,6 @@
 Package: winratiosim
 Type: Package
-Title: R package to implement sampling algorithm to estimate the degrees of freedom of the Student-t distribution
+Title: R package for power analysis simulation for sample size calculation for the win ratio endpoint using the FS test and YG test
 Version: 1.0.0
 Author: c(person("Se Yoon","Lee", email = "seyoonlee.stat.math@gmail.com", role = c("aut", "cre"))
 Maintainer: Se Yoon Lee <seyoonlee.stat.math@gmail.com>
