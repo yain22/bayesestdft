@@ -8,23 +8,11 @@ Authors@R:
            email = "seyoonlee.stat.math@gmail.com",
            role = c("aut", "cre"))
 Description: winratiosim provides an R implementation of power analysis simulations for sample size determination when using the win ratio endpoint.
-    It supports both the FS (Finkelstein-Schoenfeld) test and the YG (Yang and Gastwirth) test.
-    Simulation features include control over event rates, accrual parameters, and censoring.
+    It supports both the FS test and the YG test. 
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
-Imports:
-    dplyr,
-    foreach,
-    doSNOW,
-    pbmcapply,
-    kableExtra,
-    plyr,
-    magrittr,
-    parallel,
-    stats,
-    utils
 URL: https://github.com/yain22/winratiosim
 BugReports: https://github.com/yain22/winratiosim/issues
 Depends: 
