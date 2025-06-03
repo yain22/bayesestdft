@@ -36,7 +36,7 @@
 #' @examples
 #' \dontrun{
 #' power.design_parameters <- list(
-#'   nsim = 10000,
+#'   nsim = 100, # nsim = 10000 is the default
 #'   N = 400,
 #'   Randomization.ratio = c(1, 1),
 #'   alpha.JFM = 0, theta.JFM = 1,
