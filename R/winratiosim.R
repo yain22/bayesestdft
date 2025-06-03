@@ -45,7 +45,7 @@
 #'   xbase_trt = 45, xfinal_trt = 45 + 7.5, sd.delta.x_trt = 20,
 #'   xbase_ctl = 45, xfinal_ctl = 45, sd.delta.x_ctl = 20,
 #'   censorrate_trt = 0.2, censorrate_ctl = 0.2,
-#'   nc = 10
+#'   nc = 1
 #' )
 #'
 #' result <- do.call(winratiosim, power.design_parameters)
