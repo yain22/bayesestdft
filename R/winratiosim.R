@@ -66,9 +66,9 @@ winratiosim <- function(nsim, N, Randomization.ratio, alpha.JFM, theta.JFM,
     )
     
     # Layered datasets
-    df_layer1 <- df_outcome1 %>% select(usubjid1, treatment1, usubjid2, treatment2, score)
-    df_layer2 <- df_outcome2 %>% select(usubjid1, treatment1, usubjid2, treatment2, score)
-    df_layer3 <- df_outcome3 %>% select(usubjid1, treatment1, usubjid2, treatment2, score)
+    df_layer1 <- df_outcome1 %>% dplyr::select(usubjid1, treatment1, usubjid2, treatment2, score)
+    df_layer2 <- df_outcome2 %>% dplyr::select(usubjid1, treatment1, usubjid2, treatment2, score)
+    df_layer3 <- df_outcome3 %>% dplyr::select(usubjid1, treatment1, usubjid2, treatment2, score)
     
     # Win ratio analysis
     df_result <- WR_analysis(
