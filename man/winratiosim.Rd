@@ -81,7 +81,7 @@ library(doSNOW)
 set.seed(20250518)
 ## Set the data generating parameters
 power.design_parameters = list(
-      nsim = 10000,
+      nsim = 10, # nsim = 10000 is the default
       N = 400, # 100, 200, 300, 400, 500
       Randomization.ratio = c(1, 1),
       alpha.JFM = 0, theta.JFM = 1,
