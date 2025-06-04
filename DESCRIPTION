@@ -1,0 +1,29 @@
+Package: winratiosim
+Type: Package
+Title: Power Analysis Simulation for Sample Size Calculation Using the Win Ratio Endpoint
+Version: 1.0.0
+Authors@R: 
+    person(given = c("Se", "Yoon"),
+           family = "Lee",
+           email = "seyoonlee.stat.math@gmail.com",
+           role = c("aut", "cre"))
+Description: Implements simulation-based power analysis for determining sample size in clinical trials using the win ratio endpoint.
+License: GPL-2 | file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Imports:
+    dplyr,
+    foreach,
+    doSNOW,
+    pbmcapply,
+    kableExtra,
+    plyr,
+    magrittr,
+    parallel,
+    stats,
+    utils
+URL: https://github.com/yain22/winratiosim
+BugReports: https://github.com/yain22/winratiosim/issues
+Depends: 
+    R (>= 4.0.0)
