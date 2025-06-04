@@ -130,8 +130,10 @@ SimData_per_group <- function(treatment, ngroup, alpha.JFM, theta.JFM, lambda, a
   surv <- df_kccq
 
   if (treatment == 1) {
-    return(list(surv_1 = surv))
+    #return(list(surv_1 = surv))
+    assign("surv_1", surv, envir = .GlobalEnv)
   } else if (treatment == 0) {
-    return(list(surv_0 = surv))
+    #return(list(surv_0 = surv))
+    assign("surv_0", surv, envir = .GlobalEnv)
   }
 }
