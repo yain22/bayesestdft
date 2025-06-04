@@ -8,7 +8,6 @@ Authors@R:
            email = "seyoonlee.stat.math@gmail.com",
            role = c("aut", "cre"))
 Description: winratiosim provides an R implementation of power analysis simulations for sample size determination when using the win ratio endpoint.
-    It supports both the FS test and the YG test. 
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
