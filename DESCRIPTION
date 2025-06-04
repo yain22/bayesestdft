@@ -7,7 +7,7 @@ Authors@R:
            family = "Lee",
            email = "seyoonlee.stat.math@gmail.com",
            role = c("aut", "cre"))
-Description: winratiosim provides an R implementation of power analysis simulations for sample size determination when using the win ratio endpoint.
+Description: Implements simulation-based power analysis for determining sample size in clinical trials using the win ratio endpoint.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
