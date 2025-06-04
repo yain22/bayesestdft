@@ -72,7 +72,7 @@ winratiosim <- function(nsim, N, Randomization.ratio, alpha.JFM, theta.JFM,
     n_control <- N - n_treatment
 
     # Simulate treatment arm
-    SimData_per_group(
+    surv_1 <- SimData_per_group(
       treatment = 1, ngroup = n_treatment,
       alpha.JFM = alpha.JFM, theta.JFM = theta.JFM,
       ann.icr = ann.icr_trt, lambda = lambda_trt, censorrate = censorrate_trt,
@@ -80,7 +80,7 @@ winratiosim <- function(nsim, N, Randomization.ratio, alpha.JFM, theta.JFM,
     )
 
     # Simulate control arm
-    SimData_per_group(
+    surv_0 <- SimData_per_group(
       treatment = 0, ngroup = n_control,
       alpha.JFM = alpha.JFM, theta.JFM = theta.JFM,
       ann.icr = ann.icr_ctl, lambda = lambda_ctl, censorrate = censorrate_ctl,
