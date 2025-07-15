@@ -1,6 +1,6 @@
 # Goal
 
-This R package implements the power analysis simulation described in the paper: Lee, S.Y. A note on the sample size formula for a win ratio endpoint. Statistics in Medicine (just accepted) 2025:00(00):0-00.
+This R package implements the power analysis simulation described in the paper: Lee, S.Y. A note on the sample size formula for a win ratio endpoint. Statistics in Medicine (https://doi.org/10.1002/sim.70165).
 
 # Install R libaries to install winratiosim
 ### Note: The user needs to install several R libraries in order to set up winratiosim. Ensure that the following libraries are installed.
