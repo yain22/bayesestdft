@@ -203,7 +203,7 @@ Table: Simulation Results
 [1] "Median value of probability of tie is 0.191"
 ```
 # References
-1. Lee, S.Y. A note on the sample size formula for a win ratio endpoint. Statistics in Medicine (just accepted) 2025:00(00):0-00
+1. Lee, S.Y. A note on the sample size formula for a win ratio endpoint. Statistics in Medicine (https://doi.org/10.1002/sim.70165)
 2. Yu, R. X., & Ganju, J. (2022). Sample size formula for a win ratio endpoint. Statistics in medicine, 41(6), 950-963.
 3. Finkelstein, D. M., & Schoenfeld, D. A. (1999). Combining mortality and longitudinal measures in clinical trials. Statistics in medicine, 18(11), 1341-1354.
 4. Pocock, S. J., Ariti, C. A., Collier, T. J., & Wang, D. (2012). The win ratio: a new approach to the analysis of composite endpoints in clinical trials based on clinical priorities. European heart journal, 33(2), 176-182.
